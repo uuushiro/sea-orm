@@ -9,6 +9,7 @@ use sqlx::postgres::PgConnectOptions;
 use sqlx::sqlite::SqliteConnectOptions;
 
 mod connection;
+mod database_executor;
 mod db_connection;
 mod executor;
 #[cfg(feature = "mock")]
@@ -28,6 +29,7 @@ mod stream;
 mod transaction;
 
 pub use connection::*;
+pub use database_executor::*;
 pub use db_connection::*;
 pub use executor::*;
 #[cfg(feature = "mock")]
